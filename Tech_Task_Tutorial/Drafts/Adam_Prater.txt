@@ -1,0 +1,23 @@
+Rough Draft of Tech Task -- Adam Prater
+
+Filtering:
+
+Syntax:
+
+Filtering is what allows a user to run only a select group of test cases.
+Instead of having to run every test case in a spec file, filtering allows the user
+to run only test cases that meet a certain criteria.
+
+Command:
+
+Discuss the syntax where the tags are used to define a test as part of a certain category.
+This is used through meta data with the syntax, positive (any variable): true.
+This is setting this test case as part of the positive test case group.
+
+Output:
+
+To run the positive test cases use the command, "rspec --tag positive filter_spec.rb".
+The use of "--tag" then the variable name is what runs a certain category of test cases.
+
+Following the output will display the filtered test cases and show how many failed as well
+as the tag specification.

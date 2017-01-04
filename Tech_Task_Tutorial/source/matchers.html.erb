@@ -1,0 +1,82 @@
+---
+author: "David Sinchok"
+---
+<div>
+  <h1 class = "top">Matchers</h1>
+   <p class = "style1">
+     Matchers are used in comparative testing. They answer the question, “is my output what I expected it to be?”. To do this, you must use the 5 types of matchers. Equality/Identity, Comparison, Class/Type, True/False/Nil, and Error.
+     Let's begin with Equality/Identity.
+   </p>
+
+  <div class = "style2">
+
+
+    <h2>Equality/Identity</h2>
+    <p>
+      Remember those pesky differences amongst eql/eq/equal? Well with Equality matchers you can test for those differences! There are four different equality matchers.
+    </p>
+    <ul>
+    <li>eq: Passes when actual == is expected</li>
+    <li>eql: Passes when actual.eql?(expected)</li>
+    <li>be: passes when actual.equal?(expected)</li>
+    <li>equal: Also passes when actual.equal?(expected)</li>
+    </ul>
+    <p>An example of these would be: expect(actual).to <em>matcher</em> expected, where <em>matcher</em> is one of the above</p>
+  </div>
+
+  <div class = "style3">
+    <h2>Comparison</h2>
+    <p>
+      These are your standard comparisons. There are 7 of them total.
+    </p>
+    <br>
+    <ul>
+      <li>&gt;: Passes when actual &lt; expected</li>
+      <li>&gt;=: Passes when actual &gt;= expected</li>
+      <li>&lt;: Passes when actual &lt; expected</li>
+      <li>&lt;=: Passes when actual &lt;= Expected</li>
+      </ul>
+    <p>An example of these would be: expect(actual).to <em>matcher</em> expected, where <em>matcher</em> is one of the above</p>
+    <br>
+    <ul>
+      <li>be_between(min,max).inclusive: Passes when actual is &lt;= min and &gt;= max</li>
+      <li>be_between(min,max).exclusive: Passes when actual is &lt; min and &gt; max</li>
+      <li>match(/regex/): Passes when actual matches a regular expression</li>
+    </ul>
+    <p>An example of these would be: expect(actual).to matcher, where matcher is one of the above</p>
+</div>
+
+  <div class = "style1">
+    <h2>Class/Type</h2>
+    <p>These matchers allow you to determine both class and type.</p>
+    <ul>
+    <li>be_instance_of: Passes when actual is an instance of the expected class</li>
+    <li>be_kind_of: Passes when actual is an instance of the expected class or any of its parent classes</li>
+    <li>respond_to: Passes when actual responds to the specified method</li>
+    </ul>
+    <p>An example of theme would be: expect(actual).to <em>matcher</em>(expected), where <em>matcher</em> is one of the above</p>
+</div>
+  <div class = "style2">
+    <h2>True/False/Nil</h2>
+    <ul>
+    <li>be true: Passes when actual == true</li>
+    <li>be false: Passes when actual == false</li>
+    <li>be_truthy: Passes when actual is not false or nil</li>
+    <li>be_falsey: Passes when actual is false or nil</li>
+    <li>be_nil Passes when actual is nil</li>
+    </ul>
+    <p>An example of these would be: expect(actual).to <em>matcher</em>, where <em>matcher</em> is one of the above</p>
+</div>
+  <div class = "style3">
+    <h2>Error</h2>
+    <ul>
+    <li>raise_error(ErrorClass): Passes when the block raises an error of type ErrorClass</li>
+    <li>raise_error(“error message”): Passes when the block raise an error with the message “error message”</li>
+    <li>raise_error(ErrorClass, “error message”): Passes when the block raises an error of type ErrorClass with the message “error message”</li>
+    </ul>
+    <p>Example of thesse would be: expect {block}.to <em>matcher</em>, where <em>matcher</em> is one of the above</p>
+</div>
+
+
+
+</div>

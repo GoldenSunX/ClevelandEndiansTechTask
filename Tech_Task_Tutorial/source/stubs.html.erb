@@ -1,0 +1,31 @@
+---
+author: "David Sinchok"
+---
+<div>
+  <h1 class = "top">Stubs</h1>
+  <div class = "style1">
+    <p>
+      Stubs are very similar to Test Doubles in that they “stand in” for something. In this case, rather than objects, they stand in for methods.
+    </p>
+  </div>
+
+  <div class = "style2">
+    <img src="images/Doubles_code.PNG" alt="Doubles_code.PNG">
+
+    <p>
+      Let’s take our previous code for example. In our example, the allow() method provides the "Stubs" that we
+      need to test the Habitat class. However, because animals hasn't been created, we need a way to have an object
+      that will stand in for the instance of the animal class, even though the class doesn't actually exist yet. All we
+      need from the animal class is the weight of each animal and we can use the allow() method to create a "Stub" for
+      that weight.
+    </p>
+  </div>
+
+  <div class = "style3">
+    <p>
+      This, again, will output 1 example, and 0 failures.
+    </p>
+    <img src="images/Doubles_output.PNG" alt="Doubles_output.PNG">
+  </div>
+
+</div>

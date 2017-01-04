@@ -1,0 +1,14 @@
+Tech Task Tutorial
+Sam Yinger
+Outline:
+
+Expectations:
+
+•	Overview
+    o	Description: expect()
+        -	Example
+    o	Elaboration: why relevant
+•	Old format
+    o	Description: should()
+        -	Example
+    o	Elaboration: why relevant

@@ -1,0 +1,24 @@
+---
+author: "David Sinchok"
+---
+<div>
+  <h1 class = "top">Hooks</h1>
+  <div class = "style1">
+  <p>
+    Hooks allow for a programmer to set up and tear down code between each test. This allows for not only much
+    cleaner/terse code, but for stronger tests. You never have to worry about code from one test spilling into another.
+    There are a few different hooks you can use in RSpec. The primary ones used are the before and after hooks. They can
+    take :each or :all as their parameters. :each means that the code will run right before/after each “test” (it) is run.
+    :all means that it will run one time before/after any of the “test” (it) have run. Here’s an example.
+  </p>
+    <img src="images/Hooks_code.PNG" alt="Hooks_code.PNG">
+
+  </div>
+  <div class = "style2">
+  <p>
+    The output should look like this.
+  </p>
+    <img src="images/Hooks_output.PNG" alt="Hooks_output.PNG">
+  </div>
+
+</div>

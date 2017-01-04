@@ -1,0 +1,36 @@
+Outline - Andrew Fox 
+Topics:
+Tags
+Subjects
+Helpers
+Metadata
+
+Outline:
+Information about tags
+	What are tags?
+	How are tags useful?
+	Example image of a tag being used to specify running only specific tests
+	Example of running rspec tests with that specified tag.
+
+Information about subjects
+	Talk about importance of clean and easy to write tests.
+	Ruby – terse code is considered good practice, even in tests
+	What a subject is
+	How using subjects simplifies the code
+	Example of how code can be simplified with a subject
+
+Information about helpers
+	Code reusability – can test one method and ensure it is correct instead of adding more points to 	break your own tests – Single Point of Control
+	Helper methods in rspec allow for this to be simple, as you can define whatever methods you 	want within the describe statement
+	Example of a helper within the rspec test file, showing its scope
+
+	Show example using modules and Rspec.configure to allow all tests to use methods within the 	module
+
+Information about metadata
+	Sometimes you want to know more information about the tests rspec is running
+	Rspec keeps track of data about every unit test being run
+	Show example of printing out metadata
+	Talk about what information is held in the metadata hash
+	Talk about the hash’s scope, and how the metadata allows you to declare variables at different scopes within the describe code block.
+
+	Possibly tie into filtering

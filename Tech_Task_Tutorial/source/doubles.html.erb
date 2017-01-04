@@ -1,0 +1,41 @@
+---
+author: "David Sinchok"
+---
+<div>
+  <h1 class = "top">Test Doubles</h1>
+  <div class = "style1">
+    <p>
+      Have you ever written code, and you realized you needed some object that you haven't created yet? That’s what test doubles are for.
+      Test doubles are also known as RSPEC “Mocks”. The idea behind these, is that they allow you to test your code without
+      having to depend on objects that: have not been created, are not yours, or do not work yet. This means if a test fails,
+      we know outright that the error is in our code, not anywhere else. This is very helpful in debugging code and for test
+      driven development.
+    </p>
+  </div>
+
+  <div class = "style2">
+    <p>
+      Let’s say, for example, that you’re writing code to figure out the total weight of all the animals in a habitat. Your code and test cases may look something like this.
+    </p>
+    <img src="images/Doubles_code.PNG" alt="Doubles_Code.PNG">
+
+
+    <p>
+      You want to test your class “Habitat” however, you haven’t created the class “Animals” yet. This is where test
+      doubles come in. You can use RSPEC to define test cases without Animals having been created yet.
+    </p>
+  </div>
+
+  <div class = "style3">
+
+    <p>
+      When the above code is executed, it will output that there was 1 example, and 0 failures. If it were to fail, you
+      would know that the error lies in your class “Habitat” rather than anywhere else.
+
+      Here's an example output. Note: the running time is dependent on your machine, so if you're following along, your
+      output might vary in that regard.
+    </p>
+    <img src="images/Doubles_output.PNG" alt="Doubles_output.PNG">
+
+  </div>
+</div>

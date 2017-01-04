@@ -1,0 +1,52 @@
+---
+author: "Andrew Fox"
+---
+<div>
+  <h1 class="top">Metadata</h1>
+  <div class="style1">
+    <p>
+      Rspec keeps track of many different pieces of information for each test it runs. Occasionally, it can be useful to
+      print this information to the screen or use this information while the test is running. Fortunately, Rspec allows
+      for this information to be accessed. In order to access the information that Rspec is holding about the current test,
+      the example.metadata hash can be accessed. The example below shows how to do this.
+    </p>
+    <img src="images/metadata_code.png" alt="Metadata_Code.png">
+  </div>
+  <div class="style2">
+    <p>
+      Through adding the example variable to the block, Rspec is allowed to pass the information needed into the test when
+      yielding. In the example above, all of the metadata is printed out after the test. The following image shows the output.
+    </p>
+    <img src="images/metadata_output.png" alt="Metadata_Output.png">
+    <p>
+      As the image shows, the metadata hash gives us access to information such as the file_path, line_number,
+      test_description, and result of the test from within the test itself.
+    </p>
+  </div>
+  <div class="style3">
+      <h2>Scoping</h2>
+      <p>
+        One of the main uses of this metadata hash is the ability to limit the scope of your variables for your tests. By
+        declaring hashes as parameters to the describe, context, or it keywords, variables with scope limited to the
+        keyword they are declared in are created. The image below shows an example of this.
+      </p>
+
+    <img src="images/scoping_code.png" alt="Scoping_Code.png">
+  </div>
+  <div class="style1">
+    <p>
+      The above example shows three keys being created for the metadata hash. One at the describe keyword, and one for
+      each of the individual tests. However, the result (shown below) shows that only two of them are defined for the last
+      test.
+    </p>
+    <img src="images/scoping_output.png" alt="Scoping_Output.png">
+  </div>
+  <div class="style2">
+    <h2>Summary</h2>
+    <p>
+      Metadata allows for the tester to have more information about the tests being run, and if setup right, allows for
+      scope to be added to added for the tests. These are two very useful functions that allow more control over Rspec
+      testing.
+    </p>
+  </div>
+</div>

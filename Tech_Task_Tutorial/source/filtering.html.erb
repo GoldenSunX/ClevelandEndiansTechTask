@@ -1,0 +1,41 @@
+---
+author: "Adam Prater"
+---
+
+<div>
+  <h1 class="top">Filtering</h1>
+  <div class="style1">
+    <h2>Syntax</h2>
+    <p>
+       If your spec file contains tests expecting to pass and tests expecting to error,
+      filtering is how you can run just one type at a time.
+    </p>
+    <img src="images/filtering_1.png" alt="filtering_1.png"/>
+    <p>
+      The example above shows how to define positive and negative tests by adding
+      positive: true or negative: true to your test case.
+    </p>
+  </div>
+  <div class="style2">
+    <h2>Command</h2>
+    <p>Now that your test cases are defined as positive or negative, run the command below
+    to take advantage of filtering.
+    </p>
+    <img src="images/filtering_2.png" alt="filtering_2.png"/>
+    <p>
+      By including "--tag positive" in the command, RSpec will only run test cases the
+      positive metadata variable defined.
+    </p>
+  </div>
+  <div class="style3">
+    <h2>Output</h2>
+    <p>
+      The command should generate the output below. Notice that only the test case with
+      positive metadata variable defined ran.
+    </p>
+    <img src="images/filtering_3.png" alt="filtering_3.png"/>
+    <p>
+      You can also run only negative tests by changing positive to negative in the command.
+    </p>
+  </div>
+</div>

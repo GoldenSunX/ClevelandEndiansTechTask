@@ -1,0 +1,68 @@
+---
+author: "Cole Albers"
+---
+<div>
+  <h1 class="top">Basic Syntax</h1>
+  <div class="style1">
+    <p>
+        Let’s now take a deeper look at some of the keywords used in our RSpec example from before:
+    </p>
+    <img src="images/Basic_Syntax_1.PNG" alt="Basic_Syntax_1.PNG">
+  </div>
+    <div class="style2">
+        <h2>Keyword - "describe"</h2>
+        <p>
+            “describe” is used to define a collection of test cases for your Ruby code. Usually, “describe” is the
+            name of the current class/module you are testing; in our example above, we are testing the HelloWorld
+            class, thus, our “describe” is HelloWorld.
+        </p>
+    </div>
+    <div class="style3">
+        <h2>Keyword - "context"</h2>
+        <p>
+            “context” is used to separate tests depending on their type. Usually, the “context” is a string, describing
+            the context of the test. For example, you might want to test valid input, invalid input, or boundary input.
+            The “context” would then look like the following:
+        </p>
+        <ul>
+            <li>context “when passing valid input into the method foo()”</li>
+            <li>context “when passing invalid input into the method foo()”</li>
+            <li>context “when passing boundary input into the method foo()”</li>
+        </ul>
+    </div>
+    <div class="style1">
+        <h2>Keyword - "it"</h2>
+        <p>
+            “it” is used to define the specific test case. Usually, the “it” is a string, describing the specific
+            behavior, or expected outcome, of the test. In our example above, the “it” states the hello_world method
+            should return “Hello World!” when called.
+        </p>
+    </div>
+    <div class="style2">
+        <h2>Keyword - "expect", "to", "eql"</h2>
+        <p>
+            “expect” is used to define the expectation of the test case. “expect” validates that a specific condition
+            has been met in order for the test to be successful. In our example above, we expect the variable ‘output’
+            will equal the string “Hello World!” when the hello_world method is called.
+        </p>
+        <p>
+            “to” is used in combination with “expect” to reference what we are comparing our expectation to.
+        </p>
+        <p>
+            “eql” is used in combination with “to” and “expect” to specify what kind of condition we are testing.
+            In our example above, we expect ‘output’ to equal (string equality) “Hello World!”. “eql” is an example
+            of a Matcher, which will be discussed later in the tutorial.
+        </p>
+    </div>
+    <div class="style3">
+        <h2>Conclusion</h2>
+        <p>
+            Overall, keywords help test cases be much more descriptive. You should be able to read your test case like
+            a story. In our example above, this would be our story:
+        </p>
+        <p>
+            “HelloWorld when testing the HelloWorld class should return ‘Hello World!’ when the hello_world method is
+            called. We expect the variable ‘output’ to equal the string ‘Hello World!’ when our test completes.”
+        </p>
+    </div>
+</div>

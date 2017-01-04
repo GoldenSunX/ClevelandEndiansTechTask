@@ -1,0 +1,38 @@
+---
+author: "Sam Yinger"
+---
+
+<div>
+  <h1 class="top">Expectations</h1>
+  <div class="style1">
+    <p>
+      Let’s look at the main method you will use for testing your Ruby code:
+    </p>
+    <img src="images/Expectations_1.png" alt="Expectations_1.png">
+  </div>
+  <div class="style2">
+    <h2>Keyword - "expect"</h2>
+    <p>
+      An Expectation is a statement in an ‘it block’ that uses the expect() block. The format should look similar
+      to 'expect(resultValue).to eq(expectedValue)'
+    </p>
+    <p>
+      This statement is necessary to be able to test the behavior of your Ruby code. You know how a method or module should
+      work and you can check to see if it meets expectations. In the example we can see that we insert what
+      the function/method/module is supposed to return to happen inside of the parenthesis so we can
+      compare it to other values for the sake of testing testing.
+    </p>
+  </div>
+  <div class="style3">
+    <h2>Old Format</h2>
+    <p>
+      You should also be aware that there is an older expectation format that you might see if you are reviewing test
+      cases that had been made previously. This format is similar to '(resultValue).should eq(expectedValue)'
+    </p>
+    <img src="images/Expectations_2.png" alt="Expectations_2.png">
+    <p>
+      It is important to be aware of of this format only in case you encounter older Ruby RSpec cases.
+      Other than that you should always use the expect() format since it is the current up-to-date format for RSpec testing.
+    </p>
+  </div>
+</div>

@@ -1,0 +1,42 @@
+---
+author: "Andrew Fox"
+---
+<div>
+  <h1 class="top">Helpers</h1>
+  <div class="style1">
+    <p>
+      Code reuse is an important aspect of creating any program. Rspec allows for your tests to reuse code as well. This
+      single point of control functionality allows for tests to be much more easily maintainable, and can be helpful for
+      ensuring the correctness of the tests as well.
+    </p>
+    <p>
+      Helper functions in Rspec work much like they do in normal Ruby code. The function definition can be exactly the
+      same; the main difference is with the scope of the functions created. There are two main ways to use helper functions
+      in Rspec; define them within the describe code block that they are being used, or for maximum reusability, define
+      the function in a module, and then use the Rspec.configure function to include the module in all of the tests easily.
+      The following example shows a basic function defined within an Rspec describe code block.
+    </p>
+    <img src="images/helper_example.png" alt="Helper_Example.png">
+  </div>
+  <div class="style2">
+    <p>
+      The function change_car_speed can now be called from anywhere within the describe keyword’s code block.
+      In the example above, it was used to change one of the subject’s instance variables.
+    </p>
+    <p>
+      In order to move the helper functions out of the describe code block, a module can be created and then included into
+      the Rspec configuration. The following image shows both a module and the functions used to include the module into
+      Rspec’s configuration. Now, all functions in the Helpers module can be accessed within describe code blocks, allow for easy code reuse.
+
+    </p>
+    <img src="images/helper_module.png" alt="Helper_Module.png">
+  </div>
+  <div class="style3">
+    <h2>Summary</h2>
+    <p>
+      Helper methods are useful in both writing application code, as well as test cases. Using Ruby’s modules allows for
+      the most code reusability, and helps to keep the test case code clean and maintainable. When writing tests, any
+      common code written between tests should likely be put into a helper function.
+    </p>
+  </div>
+</div>

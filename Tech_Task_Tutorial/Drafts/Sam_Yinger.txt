@@ -1,0 +1,33 @@
+Tech Task Tutorial
+Sam Yinger
+Rough Draft:
+
+Expectations:
+
+Summary:
+An Expectation is a statement in an ‘it block’ that uses the expect() block. The format should look similar
+to 'expect(resultValue).to eq(expectedValue)'
+
+expect(2 + 2).to eq(4) #this is true since 2 + 2 = 4
+
+This statement is crucial to be able to test the behavior of your ruby code. You know how a method or module should
+work and you can check to see if it meets expectations. In the example we can see that we insert what
+the function/method/module is supposed to return to happen inside of the parenthesis so we can
+compare it to other values for the sake of testing testing.
+
+You should also be aware that there is an older expectation format that you might see if you are reviewing test
+cases that had been made previously. This format is similar to '(resultValue).should eq(expectedValue)'
+
+(2 + 1).should eq(3) #this is true since 2 + 1 = 3
+
+It is important to bve aware of of this format only in case you encounter older ruby rspec cases.
+Other than that you should always use the expect() format since it is the current up-to-date format for rspec testing.
+
+
+Audience / Prerequisites:
+The following tutorial is for beginner Ruby programmers who would like to incorporate RSpec into their Ruby code. To
+get the most out of the tutorial, it is recommended you first understand basic programming concepts and practices.
+After you have completed the tutorial, you will be able to successfully incorporate RSpec unit tests into your Ruby
+applications.
+
+

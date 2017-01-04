@@ -1,0 +1,163 @@
+Tech Task Tutorial
+Cole Albers
+Rough Draft:
+
+Home:
+
+Summary:
+The Cleveland Endians’ RSpec tutorial was created to help you learn, comprehend, and construct RSpec unit tests for the
+Ruby programming language. Using RSpec while creating Ruby applications can greatly improve your programming
+capabilities and speed up deployment of your application. RSpec is used extensively by agile developers who
+practice Test Driven Development because it greatly reduces the amount of errors and bugs in their code.
+
+Audience / Prerequisites:
+The following tutorial is for beginner Ruby programmers who would like to incorporate RSpec into their Ruby code. To
+get the most out of the tutorial, it is recommended you first understand basic programming concepts and practices.
+After you have completed the tutorial, you will be able to successfully incorporate RSpec unit tests into your Ruby
+applications.
+
+Introduction:
+
+RSpec Installation:
+Before beginning the RSpec Tutorial, you must first install RSpec on your computer.
+NOTE: This tutorial assumes you have installed Ruby on your computer. If you do not have Ruby installed on your
+computer, following the instructions on the following website before continuing the tutorial:
+https://www.ruby-lang.org/en/documentation/installation/
+
+In the command line prompt, type the following:
+
+INTRODUCTION_1
+
+After typing the command above, you should see an output like the following:
+
+INTRODUCTION_2
+
+RSpec requires other gems to work correctly, so, your output from the command above might show additional gems being
+installed. Do not worry if your output differs from the above example; overall, you should now have RSpec
+installed on your computer.
+
+“Hello World!”:
+
+Like all good tutorials, we are now ready to step you through the process of creating your first “Hello World!”
+program using RSpec.
+
+Before we begin, you will need to create some directories to hold your RSpec and Ruby code. In the command line prompt,
+type the following (in order):
+
+INTRODUCTION_3
+
+The “spec” folder is where we will be placing our RSpec files because RSpec files are known as “specs”. Essentially,
+“specs” are just test files.
+
+In the command line prompt, open your favorite text editor and create the following file (named hello_world_spec.rb):
+
+INTRODUCTION_4
+
+Save the file, and then, type the following into the command line prompt (in order):
+
+INTRODUCTION_5
+
+After typing the command above, you should see an output like the following:
+
+INTRODUCTION_6
+
+Congratulations! You have just successfully created and ran your first RSpec “Hello World!” unit test.
+
+Basic Syntax:
+
+Let’s now take a deeper look at some of the keywords used in our RSpec example from before:
+
+BASIC_SYNTAX_1
+
+Keyword – “describe”:
+
+“describe” is used to define a collection of test cases for your Ruby code. Usually, “describe” is the name of the
+current class/module you are testing; in our example above, we are testing the HelloWorld class, thus, our “describe”
+is HelloWorld.
+
+Keyword – “context”:
+“context” is used to separate tests depending on their type. Usually, the “context” is a string, describing the context
+of the test. For example, you might want to test valid input, invalid input, or boundary input. The “context” would
+then look like the following:
+
+•	context “when passing valid input into the method foo()”
+•	context “when passing invalid input into the method foo()”
+•	context “when passing boundary input into the method foo()”
+
+Keyword – “it”:
+
+“it” is used to define the specific test case. Usually, the “it” is a string, describing the specific behavior,
+or expected outcome, of the test. In our example above, the “it” states the hello_world method should return
+“Hello World!” when called.
+
+Keyword – “expect”, “to”, and “eql”:
+
+“expect” is used to define the expectation of the test case. “expect” validates that a specific condition has been
+met in order for the test to be successful. In our example above, we expect the variable ‘output’ will equal the
+string “Hello World!” when the hello_world method is called.
+“to” is used in combination with “expect” to reference what we are comparing our expectation to.
+“eql” is used in combination with “to” and “expect” to specify what kind of condition we are testing.
+In our example above, we expect ‘output’ to equal (string equality) “Hello World!”. “eql” is an example of a
+Matcher, which will be discussed later in the tutorial.
+
+Conclusion:
+Overall, keywords help test cases be much more descriptive. You should be able to read your test case like a story.
+In our example above, this would be our story:
+
+“HelloWorld when testing the HelloWorld class should return ‘Hello World!’ when the hello_world method is called.
+We expect the variable ‘output’ to equal the string ‘Hello World!’ when our test completes.”
+
+Writing Specs:
+
+Now that you have learned some of the basics to RSpec, we will now show you how to write your own specs for your
+Ruby code. We will be using a new example to demonstrate some of the more minor details of RSpec.
+To begin, open your favorite text editor and create the following Ruby file (name it operators.rb) in the rspec_examples
+ folder you created previously:
+
+WRITING_SPECS_1
+
+Next, delete the hello_world.rb file we created earlier with the following command:
+
+WRITING_SPECS_2
+
+Now, again, open your favorite text editor and create the following file (name it operators_test.rb) in the spec folder
+you created previously:
+
+WRITING_SPECS_3
+
+In the rspec_examples directory, we are now going to run our test case with the following input into the command line
+prompt:
+
+WRITING_SPECS_4
+
+You should get the following result:
+
+WRITING_SPECS_5
+
+RSpec did not find any examples because RSpec tests must end in ‘_spec.rb’. Now, change the name of the spec file and
+run the same command by typing the following commands (in order) into the command line prompt:
+
+WRITING_SPECS_6
+
+You should get the following result:
+
+WRITING_SPECS_7
+
+This is what it looks like when a test case fails. You get a description of the test that failed, which varies
+depending on your keywords, and RSpec lets you know where the error occurred, which, in this case, occurred in
+our expectation statement.
+
+Fix the error in the spec and rerun RSpec. You should get the following result:
+
+WRITING_SPECS_8
+
+Congratulations! You have successfully created and run your spec file without any failures.
+
+
+
+
+
+
+
+
+

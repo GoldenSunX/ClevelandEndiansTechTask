@@ -1,0 +1,48 @@
+I)	Matchers
+    A)	What are they?
+        1)	Comparative testing
+    B)	Types of Matchers
+        1)	Equality
+            (i)	Eq
+            (ii)	Eql
+            (iii)	Be
+            (iv)	equal
+        2)	Comparison
+            (i)	>
+            (ii)	>=
+            (iii)	 <
+            (iv)	 <=
+            (v)	Be_between inclusive
+            (vi)	Be_between exclusive
+            (vii)	match
+        3)	Class/Type
+            (i)	Be_instance_of
+            (ii)	Be_kind_of
+            (iii)	Respond_to
+        4)	True/False/Nil
+            (i)	Be true
+            (ii)	Be false
+            (iii)	Be_truthy
+            (iv)	Be_falsey
+            (v)	Be_nil
+        5)	Error
+            (i)	Raise_error(ErrorClass)
+            (ii)	Raise_error(“Error message”)
+            (iii)	Raise_error(ErrorClass, “error message”
+II)	Test Doubles
+    A)	AKA “Mock”
+    B)	Why use it?
+        1)	Stands in for objects that haven’t been created yet
+    C)	How to use it?
+    D)	Example
+III)	Stubs
+    A)	Similar to Doubles
+    B)	Why use it?
+        1)	Stands in for a Method that has yet to be created
+    C)	How to use it?
+    D)	Example
+
+IV)	Hooks
+    A)	Why use it?
+        1)	Used for cleaners tests/Ensuring each test is independent of others
+    B)	How to use it?

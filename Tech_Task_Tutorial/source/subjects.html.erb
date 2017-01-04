@@ -1,0 +1,40 @@
+---
+author: "Andrew Fox"
+---
+<div>
+  <h1 class="top">Subjects</h1>
+  <div class="style1">
+    <p>
+      Writing simple and easy to read test cases is always a priority. Writing complex test cases can often cause the test
+      cases to fail because the code within the test is incorrect, instead of there actually being an issue with the code
+      tested. Rspec attempts to keep test cases terse with subjects.
+    </p>
+    <p>
+      In the previous page, while discussing rspec tags, the following code was shown from the spec file.
+    </p>
+    <img src="images/example_with_tags.png" alt="Example_With_Tags.png">
+  </div>
+  <div class="style2">
+    <p>
+      While this code is simple already, using subjects the code can be made both more descriptive and easier to modify.
+      In the example above, there are two explicit calls to the car initialize method. However, if additional test cases
+      were needed for the case when the car object is created with “lemon” as the parameter, more instances of the Car
+      class would need to be created in the separate tests. This can be solved by passing an instance of car into the
+      describe Rspec keyword, as shown below.
+    </p>
+    <img src="images/subjects_example.png" alt="Subjects_Example.png">
+    <p>
+      As shown above, it is now easy to reuse the same object for many different tests. No functionality is lost using
+      this method either, as direct access to the object is still available using the subject variable. This method of
+      creating tests also allows the object creation to become a part of the test description, which is helpful for reading
+      and modifying the tests in the future.
+    </p>
+  </div>
+  <div class="style3">
+    <h2>Summary</h2>
+    <p>
+      Subjects allow for further cleanup of test cases, and as seen on a later page, add more information to the test’s
+      metadata. Keeping code easy to read and maintainable is important, and subjects are another way to help do this.
+    </p>
+  </div>
+</div>

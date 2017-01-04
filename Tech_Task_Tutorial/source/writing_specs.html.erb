@@ -1,0 +1,70 @@
+---
+author: "Cole Albers"
+---
+<div>
+  <h1 class="top">Writing Specs</h1>
+  <div class="style1">
+    <p>
+        Now that you have learned some of the basics to RSpec, we will now show you how to write your own specs for your
+        Ruby code. We will be using a new example to demonstrate some of the more minor details of RSpec.
+    </p>
+    <p>
+        To begin, open your favorite text editor and create the following Ruby file (name it operators.rb) in the
+        rspec_examples folder you created previously:
+    </p>
+    <img src="images/Writing_Specs_1.PNG" alt="Writing_Specs_1.PNG">
+  </div>
+  <div class="style2">
+    <p>
+        Next, delete the hello_world.rb file we created earlier with the following command:
+    </p>
+    <img src="images/Writing_Specs_2.PNG" alt="Writing_Specs_2.PNG">
+  </div>
+  <div class="style3">
+    <p>
+        Now, again open your favorite text editor and create the following file (name it operators_test.rb) in the
+        spec folder you created previously:
+    </p>
+    <img src="images/Writing_Specs_3.PNG" alt="Writing_Specs_3.PNG">
+  </div>
+  <div class="style1">
+    <p>
+        In the rspec_examples directory, we are now going to run our test case with the following input into the
+        command line prompt:
+    </p>
+    <img src="images/Writing_Specs_4.PNG" alt="Writing_Specs_4.PNG">
+  </div>
+  <div class="style2">
+    <p>
+        You should get the following result:
+    </p>
+    <img src="images/Writing_Specs_5.PNG" alt="Writing_Specs_5.PNG">
+  </div>
+  <div class="style3">
+    <p>
+        RSpec did not find any examples because RSpec tests must end in ‘_spec.rb’. Now, change the name of the spec
+        file and run the same command by typing the following commands (in order) into the command line prompt:
+    </p>
+    <img src="images/Writing_Specs_6.PNG" alt="Writing_Specs_6.PNG">
+  </div>
+  <div class="style1">
+    <p>
+        You should get the following result:
+    </p>
+    <img src="images/Writing_Specs_7.PNG" alt="Writing_Specs_7.PNG">
+  </div>
+  <div class="style2">
+    <p>
+        This is what it looks like when a test case fails. You get a description of the test that failed, which varies
+        depending on your keywords, and RSpec lets you know where the error occurred, which in this case, occurred in
+        our expectation statement.
+    </p>
+    <p>
+        Fix the error in the spec and rerun RSpec. You should get the following result:
+    </p>
+    <img src="images/Writing_Specs_8.PNG" alt="Writing_Specs_8.PNG">
+    <p>
+        Congratulations! You have successfully created and run your spec file without any failures.
+    </p>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+Outline: Adam Prater
+
+Topics:
+
+-syntax
+-tags
+-command
+-importance of filtering
+-use cases
+
+Talk about how to actually write a test case to include a tag. This will allow for filtering
+when executing test cases.
+
+Discuss the commands necessary to actually use filtering. The tags are what puts the test cases into
+categories, but the command is how you filter out what
+
+Discuss how the comman can be altered to achieve different filters.
+
+Discuss example of how filtering can be useful .

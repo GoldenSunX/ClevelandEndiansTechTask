@@ -1,0 +1,78 @@
+Rough Draft of Tech Task – Andrew Fox
+
+Tags
+
+When testing, there may be a case when it makes sense to only run a portion of the tests created. The programmer may want to only run tests where the expected output is negative, or the expected output is an exception. Rspec’s tags allow for this functionality with a slight modification to the test descriptions and a simple change in the run command. 
+
+Below is an example without using tags. If rspec is executed on this spec file, both test cases will be run. 
+
+
+In the next example however, we can specify which test case we want to run by using rspec tags. 
+
+
+As visible in the image, tags can be specified by specifying keys in a hash as the second argument to the “it” keyword. For the first test case, :sports_car is associated with true. In the second, :lemon is associated with true. Once the test cases have been setup like this, the –tag parameter can be used when calling the rspec command in the linux terminal. The following image shows an example of running only tests where the sports_car key is associated with true.
+
+
+This example output shows that rspec recognized our tag as a run option. Only one test was run as well, since there was only one test with :sports_car being associated with true. 
+
+Summary
+
+Tags are an important and powerful feature of rspec that allow programmers to keep their tests organized. Making use of tags wisely can allow for keeping the amount of time waiting for tests to complete low, as you would only need to wait for the tests deemed necessary every time you run rspec.
+
+Subjects
+
+Writing simple and easy to read test cases is always a priority. Writing complex test cases can often cause the test cases to fail because the code within the test is incorrect, instead of there actually being an issue with the code tested. Rspec attempts to keep test cases terse with subjects. 
+
+In the previous page, while discussing rspec tags, the following code was shown from the spec file.
+
+ 
+While this code is simple already, using subjects the code can be made both more descriptive and easier to modify. In the example above, there are two explicit calls to the car initialize method. However, if additional test cases were needed for the case when the car object is created with “lemon” as the parameter, more instances of the Car class would need to be created in the separate tests. This can be solved by passing an instance of car into the describe rspec keyword, as shown below. 
+
+
+As shown above, it is now easy to reuse the same object for many different tests. No functionality is lost using this method either, as direct access to the object is still available using the subject variable. This method of creating tests also allows the object creation to become a part of the test description, which is helpful for reading and modifying the tests in the future.
+
+Summary
+
+Subjects allow for further cleanup of test cases, and as seen on a later page, add more information to the test’s metadata. Keeping code easy to read and maintainable is important, and subjects are another way to help do this.
+
+Helpers
+
+Code reuse is an important aspect of creating any program. Rspec allows for your tests to reuse code as well. This single point of control functionality allows for tests to be much more easily maintainable, and can be helpful for ensuring the correctness of the tests as well.
+
+Helper functions in Rspec work much like they do in normal Ruby code. The function definition can be exactly the same; the main difference is with the scope of the functions created. There are two main ways to use helper functions in Rspec; define them within the describe code block that they are being used, or for maximum re usability, define the function in a module, and then use the Rspec.configure function to include the module in all of the tests easily. 
+
+The following example shows a basic function defined within an Rspec describe code block.
+
+
+The function change_car_speed can now be called from anywhere within the describe keyword’s code block. In the example above, it was used to change one of the subject’s instance variables.
+
+In order to move the helper functions out of the describe code block, a module can be created and then included into the Rspec configuration. The following image shows both a module and the functions used to include the module into Rspec’s configuration. 
+
+Now, all functions in the Helpers module can be accessed within describe code blocks, allow for easy code reuse.
+
+Summary
+
+Helper methods are useful in both writing application code, as well as test cases. Using Ruby’s modules allows for the most code re usability, and helps to keep the test case code clean and maintainable. When writing tests, any common code written between tests should likely be put into a helper function.
+
+
+Metadata
+
+Rspec keeps track of many different pieces of information for each test it runs. Occasionally, it can be useful to print this information to the screen or use this information while the test is running. Fortunately, Rspec allows for this information to be accessed. In order to access the information that Rspec is holding about the current test, the example.metadata hash can be accessed. The example below shows how to do this.
+
+Through adding the example variable to the block, Rspec is allowed to pass the information needed into the test when yielding. In the example above, all of the metadata is printed out after the test. The following image shows the output.
+
+
+As the image shows, the metadata hash gives us access to information such as the file_path, line_number, test_description, and result of the test from within the test itself. 
+
+Scoping
+
+One of the main uses of this metadata hash is the ability to limit the scope of your variables for your tests. By declaring hashes as parameters to the describe, context, or it keywords, variables with scope limited to the keyword they are declared in are created. The image below shows an example of this.
+
+
+The above example shows three keys being created for the metadata hash. One at the describe keyword, and one for each of the individual tests. However, the result (shown below) shows that only two of them are defined for the last test. 
+
+This is because the torque key is not associated with a value for the scope of the second test, causing the puts function to only print a newline. 
+
+Summary
+
+Metadata allows for the tester to have more information about the tests being run, and if setup right, allows for scope to be added to added for the tests. These are two very useful functions that allow more control over Rspec testing.

@@ -1,0 +1,45 @@
+---
+author: "Andrew Fox"
+---
+<div>
+  <h1 class="top">Tags</h1>
+  <div class="style1">
+    <p>
+      When testing, there may be a case when it makes sense to only run a portion of the tests created. The programmer may
+      want to only run tests where the expected output is negative, or the expected output is an exception. Rspec’s tags
+      allow for this functionality with a slight modification to the test descriptions and a simple change in the run command.
+    </p>
+    <p>
+      Below is an example without using tags. If rspec is executed on this spec file, both test cases will be run.
+    </p>
+    <img src="images/example_no_tags.png" alt="No_Tags_Example.png">
+  </div>
+  <div class="style2">
+    <p>
+      In the next example however, we can specify which test case we want to run by using rspec tags.
+    </p>
+    <img src="images/example_with_tags.png" alt="Example_With_Tags.png">
+    <p>
+      As visible in the image, tags can be specified by specifying keys in a hash as the second argument to the “it”
+      keyword. For the first test case, :sports_cars associated with true. In the second, :lemon is associated with true.
+      Once the test cases have been setup like this, the –tag parameter can be used when calling the rspec command in the
+      linux terminal. The following image shows an example of running only tests where the sports_car key is associated
+      with true.
+    </p>
+  </div>
+  <div class="style3">
+    <img src="images/console_output_tags.png" alt="Console_Output_Tags.png">
+    <p>
+      This example output shows that rspec recognized our tag as a run option. Only one test was run as well, since there
+      was only one test with :sports_car being associated with true.
+    </p>
+  </div>
+  <div class="style1">
+    <h2>Summary</h2>
+    <p>
+      Tags are an important and powerful feature of rspec that allow programmers to keep their tests organized. Making
+      use of tags wisely can allow for keeping the amount of time waiting for tests to complete low, as you would only
+      need to wait for the tests deemed necessary every time you run rspec.
+    </p>
+  </div>
+</div>

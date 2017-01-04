@@ -1,0 +1,30 @@
+Tech Task Tutorial
+Cole Albers
+Outline:
+
+Home:
+•	Summary
+    o	Bloom’s Taxonomy: Knowledge
+•	Audience / Prerequisites:
+    o	Bloom’s Taxonomy: Knowledge
+
+Introduction:
+•	RSpec Installation
+    o	Bloom’s Taxonomy: Knowledge
+•	“Hello World!”
+    o	Bloom’s Taxonomy: Application
+
+Basic Syntax:
+•	Keyword – “describe”
+    o	Bloom’s Taxonomy: Comprehension
+•	Keyword – “context”
+    o	Bloom’s Taxonomy: Comprehension
+•	Keyword – “it”
+    o	Bloom’s Taxonomy: Comprehension
+•	Keyword – “expect”, “to”, “eql”
+    o	Bloom’s Taxonomy: Comprehension
+•	Conclusion
+    o	Bloom’s Taxonomy: Comprehension
+
+Writing Specs:
+•	Bloom’s Taxonomy: Comprehension/Application

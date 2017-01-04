@@ -1,0 +1,67 @@
+--Matchers--
+
+Matchers are used in comparative testing. They answer the question, “is my output what it should be?”. There are 5 categories of matchers: Equality/Identity, Comparison, Class/Type, True/False/Nil, and Error.
+
+EQUALITY/IDENTITY
+Remember those pesky differences amongst eql/eq/equal? Well you can test for those pesky differences! There are four different equality matchers.
+eq: Passes when actual == is expected
+eql: Passes when actual.eql?(expected)
+be: passes when actual.equal?(expected)
+equal: Also passes when actual.equal?(expected)
+Example of these would be: expect(actual).to matcher expected, where matcher is one of the above
+
+
+COMPARISON
+These are your standard comparisons. There are 7 of them total.
+>: Passes when actual > expected
+>=: Passes when actual >= expected
+<: Passes when actual < expected
+<=: Passes when actual <= Expected
+Example of these would be: expect(actual).to matcher expected, where matcher is one of the above
+
+be_between(min,max).inclusive: Passes when actual is <= min and >= max
+be_between(min,max).exclusive: Passes when actual is < min and > max
+match(/regex/): Passes when actual matches a regular expression
+Example of these would be: expect(actual).to matcher, where matcher is one of the above
+
+COMPARISON
+be_instance_of: Passes when actual is an instance of the expected class
+be_kind_of: Passes when actual is an instance of the expected class or any of its parent classes
+respond_to: Passes when actual responds to the specified method
+Example of theme would be: expect(actual).to Matcher(expected), where Matcher is one of the above
+
+TRUE/FALSE/NIL
+be true: Passes when actual == true
+be false: Passes when actual == false
+be_truthy: Passes when actual is not false or nil
+be_falsey: Passes when actual is false or nil
+be_nil Passes when actual is nil
+Example of these would be: expect(actual).to Matcher, where matcher is one of the above
+
+ERROR
+raise_error(ErrorClass): Passes when the block raises an error of type ErrorClass
+raise_error(“error message”): Passes when the block raise an error with the message “error message”
+raise_error(ErrorClass, “error message”): Passes when the block raises an error of type ErrorClass with the message “error message”
+Example of these would be: expect {block}.to Matcher, where matcher is one of the above
+
+TEST DOUBLES
+Are you ever writing code, and you realize you need some object that you created yet? That’s what test doubles are for. Test doubles are also known as RSPEC “Mocks”. The idea behind these, is that they allow you to test your code without having to depend on objects that: have not been created, are not yours, or do not work yet. This means if a test fails, we know outright that the error is in our code, not anywhere else. This is very helpful in debugging code and for test driven development.
+
+Let’s say, for example, that you’re writing code to test how many animals are in a given habitat. Your code may look something like this.
+
+You want to test your class “Environment” however, you haven’t created the class “Animals” yet. This is where test doubles come in. You can use RSPEC to define test cases without Animals having been created yet.
+
+When the above code is executed, it will output that there was 1 example, and 0 failures. If it were to fail, you would know that the error lies in your class “Environment” rather than anywhere else.
+
+STUBS
+Stubs are very similar to Test Doubles in that they “stand in” for something. In this case, rather than objects, they stand in for methods.
+Let’s take our previous example and expand on it a little bit. Let’s say we wanted to know if adding an animal would make the environment unsafe. However, we haven’t created the method “isFerociousBeast?”. You can write a test similar to the following utilizing RSPEC’s allow() method to receive parameters from method’s that have yet to be created or are inaccessible.
+
+This, again, should output 1 example, and 0 failures.
+
+HOOKS
+Hooks allow for a programmer to set up and tear down code between each test. This allows for, not only much cleaner/terse code, but for stronger tests. You never have to worry about code form one test spilling into another. There are a few different hooks you can use in RSpec. The primary ones used are the before and after hooks. They can take :each or :all as their parameters. :each means that the code will run right before/after each “test” (it) is run. :all means that it will run one time before/after any of the “test” (it) have run. Here’s an example.
+
+This is what the output will look like.
+
+

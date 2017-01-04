@@ -1,0 +1,8 @@
+Mini-Syllabus (Cleveland Endians)
+-----------------------------------------------------------------------------
+Learning Objectives:
+
+1) Understand what RSpec is and why it is useful.
+2) Understand how to install RSpec and create a basic Hello World! example.
+3) Understand the basic syntax of RSpec.
+4) Understand how to write RSpec specs.

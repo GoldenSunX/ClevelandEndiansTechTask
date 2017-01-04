@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title><%= current_page.data.title || 'RSPEC Tutorial' %></title>
+  <link href="stylesheets/site.css" rel="stylesheet" />
+</head>
+<body class="<%= page_classes %>">
+<header>
+  <div role="navigation" id="page_navbar">
+    <div class="head_container">
+      <div id="logo">
+        <a href="http://rspec.info/documentation/"><img id="pic" src="images/logo.png" alt="RSpec"></a> <!--A link to the docs of Rspec-->
+        <div id="title">
+          <a class="font_stand">RSpec: Testing For Ruby</a>
+        </div>
+      </div>
+      <div class="website_links">
+        <div class="links" id="font_stand">
+          <!-- link to the CSS files for this menu type -->
+          <link rel="stylesheet" media="screen" href="stylesheets/superfish.css">
+          <link rel="stylesheet" media="screen" href="stylesheets/superfish-navbar.css">
+          <!-- link to the JavaScript files -->
+          <script src="javascripts/hoverIntent.js"></script>
+          <script src="javascripts/superfish.js"></script>
+          <!-- initialise Superfish -->
+          <script>
+            jQuery(document).ready(function(){
+              jQuery('ul.sf-menu').superfish({
+                pathClass:	'current'
+              });
+            });
+          </script>
+          <ul class="sf-menu sf-navbar sf-js-enabled sf-arrows" style="touch-action: pan-y;">
+            <li class="current">
+              <a href="#" class="sf-with-ul">Sections</a>
+              <ul style="">
+                <li class="current"><a href="index.html">Home</a></li>
+                <li class="current"><a href="introduction.html">Introduction</a></li>
+                <li class="current"><a href="basic_syntax.html">Basic Syntax</a></li>
+                <li class="current"><a href="writing_specs.html">Writing Specs</a></li>
+                <li class="current"><a href="matchers.html">Matchers</a></li>
+                <li class="current"><a href="doubles.html">Test Doubles</a></li>
+                <li class="current"><a href="stubs.html">Stubs</a></li>
+                <li class="current"><a href="hooks.html">Hooks</a></li>
+                <li class="current"><a href="filtering.html">Filtering</a></li>
+                <li class="current"><a href="tags.html">Tags</a></li>
+                <li class="current"><a href="subjects.html">Subjects</a></li>
+                <li class="current"><a href="helpers.html">Helpers</a></li>
+                <li class="current"><a href="metadata.html">Metadata</a></li>
+                <li class="current"><a href="expectations.html">Expectations</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<hr id="top">
+<%= yield %>
+<hr id="bottom">
+<footer>
+  <div class="background">
+    <div id="footer" class="boxed">
+      <div class="container">
+        <p class="font_stand" id="footer_info">
+          This page is maintained by: Cleveland Endians <br> Author: <%= current_page.data.author%>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
